@@ -1,0 +1,49 @@
+.logo-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.hexagon-logo {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+
+.hexagon-outline {
+  fill: transparent;
+  stroke: #64ffda;
+  stroke-width: 10px;
+  transition: transform 0.3s ease;
+  pointer-events: all;
+}
+
+
+.hexagon-logo:hover .hexagon-outline {
+  transform: translate(-6px, -4px);
+}
+
+
+.highlight-line {
+  stroke: #64ffda;
+  stroke-width: 15px;
+  stroke-linecap: round;
+  opacity: 0;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+
+.hexagon-logo:hover .highlight-line {
+  opacity: 1;
+  filter: drop-shadow(0px 0px 180px #64ffda);
+}
+
+
+.logo-text {
+  text-anchor: middle;
+  font-size: 64px;
+  fill: #64ffda;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  pointer-events: none;
+}

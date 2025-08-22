@@ -1,0 +1,287 @@
+/* App Container - Clean Background */
+.app {
+  background-color: var(--navy);
+  height: 100vh; /* Fixed height to enable scrolling */
+  width: 100vw;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Global Social Sidebar */
+.global-social-sidebar {
+  position: fixed;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.global-social-sidebar .social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.global-social-sidebar .social-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--light-slate);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.global-social-sidebar .social-icon:hover {
+  color: var(--green);
+  transform: translateY(-3px);
+}
+
+.global-social-sidebar .social-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.global-social-sidebar .sidebar-line {
+  width: 1px;
+  height: 90px;
+  background-color: var(--light-slate);
+  opacity: 0.3;
+}
+
+/* Global Email Sidebar */
+.global-email-sidebar {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.global-email-sidebar .sidebar-line {
+  width: 1px;
+  height: 90px;
+  background-color: var(--light-slate);
+  opacity: 0.3;
+  margin-bottom: 20px;
+}
+
+.global-email-sidebar .email-link {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: var(--light-slate);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.global-email-sidebar .email-link:hover {
+  color: var(--green);
+}
+
+/* Hide global sidebars on mobile */
+@media (max-width: 768px) {
+  .global-social-sidebar,
+  .global-email-sidebar {
+    display: none;
+  }
+}
+
+/* Content Container */
+.content-container {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding-top: 60px; /* Reduced gap between header and Hero */
+  padding-right: 20px; /* Prevent scrollbar from hiding behind header */
+  background-color: var(--navy);
+}
+
+/* Internal Container for Social Media */
+.internal-container {
+  margin: 0 30px; /* Equal margins on both sides */
+  padding: 0; /* Removed top and bottom padding */
+  background-color: transparent;
+  min-height: 100vh; /* Ensure minimum height */
+}
+
+/* Section Boxes */
+.section-box {
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: none;
+  scroll-margin-top: 120px; /* Account for sticky header */
+}
+
+/* Hero Section */
+.section-hero {
+  background-color: transparent;
+  height: auto;
+  min-height: 100vh; /* Full viewport height */
+  padding: 0 40px; /* Minimal padding for Hero */
+  box-sizing: border-box;
+}
+
+/* About Section */
+.section-about {
+  background-color: transparent;
+  height: auto;
+  min-height: 100vh; /* Full viewport height */
+  padding: 0 80px 0 220px; /* More padding than Hero */
+  box-sizing: border-box;
+}
+
+/* Experience Section */
+.section-experience {
+  background-color: transparent;
+  height: auto;
+  min-height: 100vh; /* Full viewport height */
+  padding: 0 100px; /* Symmetric padding for proper centering */
+  box-sizing: border-box;
+}
+
+/* Work Section */
+.section-work {
+  background-color: transparent;
+  height: auto;
+  min-height: 80vh; /* Reduced from 100vh to reduce gap */
+  padding: 0 40px; /* Same as Hero for Work section */
+  box-sizing: border-box;
+  margin-bottom: 10px; /* Reduced margin to decrease gap */
+}
+
+/* Contact Section */
+.section-contact {
+  background-color: transparent;
+  height: auto;
+  min-height: 80vh; /* Reduced from 100vh to reduce gap */
+  padding: 0 40px; /* Same as Hero for Contact section */
+  box-sizing: border-box;
+  margin-bottom: 10px; /* Reduced margin to decrease gap */
+}
+
+/* Footer Section */
+.section-footer {
+  background-color: transparent;
+  height: auto;
+  min-height: auto; /* Auto height for footer */
+  padding: 0 40px; /* Same as Hero for Footer section */
+  box-sizing: border-box;
+}
+
+/* Spacer to ensure scrolling */
+.scroll-spacer {
+  height: 2000px;
+  width: 100%;
+  background: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content-container {
+    margin: 0 40px;
+  }
+
+  .internal-container {
+    margin: 0 20px;
+  }
+
+  .section-about {
+    padding: 0 60px;
+  }
+
+  .section-experience {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    margin: 0 20px;
+    padding-top: 40px;
+    padding-right: 10px;
+  }
+
+  .internal-container {
+    margin: 0 10px;
+  }
+
+  .section-box {
+    scroll-margin-top: 100px; /* Reduced for mobile */
+  }
+
+  .section-hero {
+    padding: 0 20px;
+    min-height: 80vh;
+  }
+
+  .section-about {
+    padding: 0 20px;
+    min-height: 80vh;
+  }
+
+  .section-experience {
+    padding: 0 20px;
+    min-height: 80vh;
+  }
+
+  .section-work {
+    padding: 0 20px;
+    min-height: 80vh;
+  }
+
+  .section-contact {
+    padding: 0 20px;
+    min-height: 80vh;
+  }
+
+  .section-footer {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-container {
+    margin: 0 10px;
+    padding-top: 30px;
+    padding-right: 5px;
+  }
+
+  .internal-container {
+    margin: 0 5px;
+  }
+
+  .section-box {
+    scroll-margin-top: 80px; /* Further reduced for small mobile */
+  }
+
+  .section-hero,
+  .section-about,
+  .section-experience,
+  .section-work,
+  .section-contact {
+    padding: 0 15px;
+    min-height: 70vh;
+  }
+
+  .section-footer {
+    padding: 0 15px;
+  }
+}
+

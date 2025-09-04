@@ -118,7 +118,7 @@
 /* Mobile responsive */
 @media (max-width: 768px) {
   .hero-section {
-    padding-top: 120px;
+    padding-top: 80px;
   }
   
   .hero-name {
@@ -142,7 +142,7 @@
 /* Small mobile responsive */
 @media (max-width: 640px) {
   .hero-section {
-    padding-top: 100px;
+    padding-top: 50px;
   }
   
   .hero-name {
@@ -161,7 +161,7 @@
 /* Extra small mobile responsive */
 @media (max-width: 480px) {
   .hero-section {
-    padding-top: 80px;
+    padding: 0;
   }
   
   .hero-name {

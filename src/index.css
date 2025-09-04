@@ -30,20 +30,13 @@ html, body {
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-}
-
-html {
   scroll-behavior: smooth;
-  background-color: var(--navy);
 }
 
 body {
-  font-family: var(--font-sans);
-  background-color: var(--navy);
+  font-family: var(--font-sans);  
   color: var(--lightest-slate);
-  line-height: 1.3;
-  overflow-y: auto;
-  overflow-x: hidden;
+  line-height: 1.3; 
   position: relative;
   min-height: 100vh;
 }

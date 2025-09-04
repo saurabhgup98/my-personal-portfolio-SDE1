@@ -34,12 +34,15 @@ const Header: React.FC<HeaderProps> = ({ animationConfig }) => {
 
       if (currentScrollY === 0) {
         setIsVisible(true);
-      } else if (currentScrollY > lastScrollY) {
-        // Scrolling down - hide header
-        setIsVisible(false);
-      } else {
-        // Scrolling up - show header
-        setIsVisible(true);
+      } else if (currentScrollY > 100) {
+        // Only hide/show after 100px scroll
+        if (currentScrollY > lastScrollY) {
+          // Scrolling down - hide header
+          setIsVisible(false);
+        } else {
+          // Scrolling up - show header
+          setIsVisible(true);
+        }
       }
 
       setLastScrollY(currentScrollY);

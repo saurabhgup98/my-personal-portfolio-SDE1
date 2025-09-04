@@ -1,8 +1,6 @@
 .footer {
   text-align: center;
   background-color: transparent;
-  border-top: 1px solid var(--light-navy);
-  margin-top: 50px;
 }
 
 .footer-content {

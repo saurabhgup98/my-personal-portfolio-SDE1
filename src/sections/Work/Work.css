@@ -4,9 +4,7 @@
 }
 
 .work-content {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 100px;
   position: relative;
 }
 
@@ -14,7 +12,7 @@
 .featured-projects {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 80px;
   margin-bottom: 120px;
 }
 

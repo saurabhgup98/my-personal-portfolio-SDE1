@@ -1,6 +1,6 @@
 import React from 'react';
 import './Contact.css';
-import SectionHeader from './SectionHeader';
+import SectionHeader from '../../components/SectionHeader';
 
 const Contact: React.FC = () => {
   const handleEmailClick = () => {

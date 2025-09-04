@@ -1,6 +1,7 @@
 import React from 'react';
 import './About.css';
-import SectionHeader from './SectionHeader';
+import SectionHeader from '../../components/SectionHeader';
+import profileImage from '../../assets/saurabh_pic_web.jpeg';
 
 const About: React.FC = () => {
   return (
@@ -45,8 +46,9 @@ const About: React.FC = () => {
           <div className="about-image">
             <div className="image-container">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=280&fit=crop&crop=face" 
+                src={profileImage} 
                 alt="Profile Photo"
+                className="profile-image"
               />
             </div>
           </div>

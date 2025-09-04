@@ -1,0 +1,13 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .hexagon-outline { fill: #64ff8a; stroke: #64ff8a; stroke-width: 2; }
+      .logo-text { font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace; font-size: 80px; font-weight: bold; fill: #0a192f; text-anchor: middle; dominant-baseline: central; }
+    </style>
+  </defs>
+  <polygon
+    class="hexagon-outline"
+    points="100,20 173.2,60 173.2,140 100,180 26.8,140 26.8,60"
+  />
+  <text x="100" y="100" class="logo-text">S</text>
+</svg>

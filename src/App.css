@@ -1,20 +1,19 @@
 /* App Container - Clean Background */
 .app {
   background-color: var(--navy);
-  height: 100vh; /* Fixed height to enable scrolling */
+  height: 100vh;
   width: 100vw;
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
-  scroll-behavior: smooth; /* Enable smooth scrolling */
+  scroll-behavior: smooth;
 }
 
 /* Global Social Sidebar */
 .global-social-sidebar {
   position: fixed;
   left: 40px;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 40px; /* Changed from top: 50% to bottom positioning */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,7 +50,7 @@
 
 .global-social-sidebar .sidebar-line {
   width: 1px;
-  height: 90px;
+  height:200px;
   background-color: var(--light-slate);
   opacity: 0.3;
 }
@@ -60,8 +59,7 @@
 .global-email-sidebar {
   position: fixed;
   right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 40px; /* Changed from top: 50% to bottom positioning */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +69,7 @@
 
 .global-email-sidebar .sidebar-line {
   width: 1px;
-  height: 90px;
+  height: 200px;
   background-color: var(--light-slate);
   opacity: 0.3;
   margin-bottom: 20px;
@@ -84,6 +82,7 @@
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.1em;
+  line-height: 1.8; /* Increased line height */
   text-decoration: none;
   transition: color 0.3s ease;
   cursor: pointer;
@@ -95,9 +94,51 @@
 
 /* Hide global sidebars on mobile */
 @media (max-width: 768px) {
-  .global-social-sidebar,
   .global-email-sidebar {
     display: none;
+  }
+  
+  .global-social-sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(100, 255, 138, 0.1);
+    z-index: 1000;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .global-social-sidebar .social-icons {
+    display: flex;
+    flex-direction: row !important;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  .global-social-sidebar .social-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--light-slate);
+    transition: all 0.3s ease;
+  }
+  
+  .global-social-sidebar .social-icon:hover {
+    color: var(--green);
+    transform: translateY(-2px);
+  }
+  
+  .global-social-sidebar .sidebar-line {
+    display: none;
+  }
+  
+  /* Add bottom padding to prevent content from being hidden behind the bar */
+  .content-container {
+    padding-bottom: 80px;
   }
 }
 
@@ -106,24 +147,24 @@
   width: 100%;
   position: relative;
   z-index: 1;
-  padding-top: 60px; /* Reduced gap between header and Hero */
+  padding-top: 80px; /* Even spacing from header to Hero */
   padding-right: 20px; /* Prevent scrollbar from hiding behind header */
   background-color: var(--navy);
 }
 
 /* Internal Container for Social Media */
 .internal-container {
-  margin: 0 30px; /* Equal margins on both sides */
-  padding: 0; /* Removed top and bottom padding */
+  margin: 100px 30px 0 30px; 
+  padding: 0;
   background-color: transparent;
-  min-height: 100vh; /* Ensure minimum height */
+  min-height: 100vh; 
 }
 
 /* Section Boxes */
 .section-box {
   width: 100%;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 80px; /* Even spacing between all sections */
   border-radius: 8px;
   box-shadow: none;
   scroll-margin-top: 120px; /* Account for sticky header */
@@ -132,10 +173,10 @@
 /* Hero Section */
 .section-hero {
   background-color: transparent;
-  height: auto;
-  min-height: 100vh; /* Full viewport height */
-  padding: 0 40px; /* Minimal padding for Hero */
+  height: auto;  
+  padding: 0 40px; 
   box-sizing: border-box;
+
 }
 
 /* About Section */
@@ -143,8 +184,9 @@
   background-color: transparent;
   height: auto;
   min-height: 100vh; /* Full viewport height */
-  padding: 0 80px 0 220px; /* More padding than Hero */
+  padding: 0 80px 0 220px; /* Only horizontal padding */
   box-sizing: border-box;
+
 }
 
 /* Experience Section */
@@ -152,8 +194,9 @@
   background-color: transparent;
   height: auto;
   min-height: 100vh; /* Full viewport height */
-  padding: 0 100px; /* Symmetric padding for proper centering */
+  padding: 0 100px; /* Only horizontal padding */
   box-sizing: border-box;
+
 }
 
 /* Work Section */
@@ -161,9 +204,9 @@
   background-color: transparent;
   height: auto;
   min-height: 80vh; /* Reduced from 100vh to reduce gap */
-  padding: 0 40px; /* Same as Hero for Work section */
+  padding: 0 40px; /* Only horizontal padding */
   box-sizing: border-box;
-  margin-bottom: 10px; /* Reduced margin to decrease gap */
+
 }
 
 /* Contact Section */
@@ -171,9 +214,9 @@
   background-color: transparent;
   height: auto;
   min-height: 80vh; /* Reduced from 100vh to reduce gap */
-  padding: 0 40px; /* Same as Hero for Contact section */
+  padding: 0 40px; /* Only horizontal padding */
   box-sizing: border-box;
-  margin-bottom: 10px; /* Reduced margin to decrease gap */
+
 }
 
 /* Footer Section */
@@ -181,8 +224,9 @@
   background-color: transparent;
   height: auto;
   min-height: auto; /* Auto height for footer */
-  padding: 0 40px; /* Same as Hero for Footer section */
+  padding: 0 40px; /* Only horizontal padding */
   box-sizing: border-box;
+
 }
 
 /* Spacer to ensure scrolling */
@@ -214,7 +258,7 @@
 @media (max-width: 768px) {
   .content-container {
     margin: 0 20px;
-    padding-top: 40px;
+    padding-top: 60px; /* Even spacing from header to Hero on mobile */
     padding-right: 10px;
   }
 
@@ -224,35 +268,36 @@
 
   .section-box {
     scroll-margin-top: 100px; /* Reduced for mobile */
+    margin-bottom: 60px; /* Even spacing between sections on mobile */
   }
 
   .section-hero {
-    padding: 0 20px;
+    padding: 0 20px; /* Only horizontal padding */
     min-height: 80vh;
   }
 
   .section-about {
-    padding: 0 20px;
+    padding: 0 20px; /* Only horizontal padding */
     min-height: 80vh;
   }
 
   .section-experience {
-    padding: 0 20px;
+    padding: 0 20px; /* Only horizontal padding */
     min-height: 80vh;
   }
 
   .section-work {
-    padding: 0 20px;
+    padding: 0 20px; /* Only horizontal padding */
     min-height: 80vh;
   }
 
   .section-contact {
-    padding: 0 20px;
+    padding: 0 20px; /* Only horizontal padding */
     min-height: 80vh;
   }
 
   .section-footer {
-    padding: 0 20px;
+    padding: 0 20px; /* Only horizontal padding */
   }
 }
 
@@ -284,4 +329,3 @@
     padding: 0 15px;
   }
 }
-

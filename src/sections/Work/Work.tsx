@@ -104,22 +104,41 @@ const Work: React.FC = () => {
                   <div className="project-card-icons">
                     <FolderIcon className="folder-icon" />
                     <div className="project-card-links">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-link"
-                      >
-                        <GitHubIcon />
-                      </a>
-                      <a
-                        href={project.external}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-link"
-                      >
-                        <ExternalLinkIcon />
-                      </a>
+                      {project.comingSoon ? (
+                        <>
+                          <span 
+                            className="project-link coming-soon-link"
+                            title="Coming Soon"
+                          >
+                            <GitHubIcon />
+                          </span>
+                          <span 
+                            className="project-link coming-soon-link"
+                            title="Coming Soon"
+                          >
+                            <ExternalLinkIcon />
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="project-link"
+                          >
+                            <GitHubIcon />
+                          </a>
+                          <a
+                            href={project.external}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="project-link"
+                          >
+                            <ExternalLinkIcon />
+                          </a>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -670,3 +670,41 @@
     padding: 2px 4px;
   }
 }
+
+/* Coming Soon Styles */
+.coming-soon-link {
+  cursor: default !important;
+  opacity: 0.3;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.coming-soon-link:hover {
+  opacity: 0.6;
+}
+
+.coming-soon-link::after {
+  content: "Coming Soon";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 25, 47, 0.95);
+  color: var(--green);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  border: 1px solid var(--green);
+  box-shadow: 0 4px 12px rgba(100, 255, 138, 0.2);
+}
+
+.coming-soon-link:hover::after {
+  opacity: 1;
+}

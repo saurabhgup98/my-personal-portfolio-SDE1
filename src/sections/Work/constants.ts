@@ -19,6 +19,7 @@ export interface OtherProject {
   github: string;
   external: string;
   tech: string[];
+  comingSoon?: boolean;
 }
 
 export const FEATURED_PROJECTS: Project[] = [
@@ -46,35 +47,20 @@ export const FEATURED_PROJECTS: Project[] = [
 
 export const OTHER_PROJECTS: OtherProject[] = [
   {
-    id: 3,
-    title: "E-Commerce Dashboard",
-    description: "Admin dashboard for managing e-commerce operations with analytics, inventory management, and order processing.",
-    github: "https://github.com/yourusername/ecommerce-dashboard",
-    external: "https://ecommerce-dashboard.com",
-    tech: ["React", "Node.js", "PostgreSQL", "Chart.js"]
-  },
-  {
-    id: 4,
-    title: "Weather App",
-    description: "Real-time weather application with location-based forecasts, interactive maps, and detailed weather analytics.",
-    github: "https://github.com/yourusername/weather-app",
-    external: "https://weather-app-demo.com",
-    tech: ["React", "OpenWeather API", "Geolocation", "CSS3"]
-  },
-  {
     id: 5,
-    title: "Portfolio Website",
-    description: "Personal portfolio website showcasing projects, skills, and professional experience with modern design.",
-    github: "https://github.com/yourusername/portfolio",
-    external: "https://portfolio-demo.com",
-    tech: ["React", "TypeScript", "Framer Motion", "SCSS"]
+    title: "Personal Portfolio",
+    description: "Modern, responsive portfolio website built with React and TypeScript, showcasing professional experience, projects, and technical skills with clean design and smooth animations.",
+    github: "https://github.com/saurabhgup98/my-personal-portfolio-SDE1",
+    external: "https://my-personal-portfolio-sde-1.vercel.app/",
+    tech: ["React", "TypeScript", "CSS3", "Vite"]
   },
   {
     id: 6,
-    title: "Chat Application",
-    description: "Real-time chat application with user authentication, message history, and file sharing capabilities.",
-    github: "https://github.com/yourusername/chat-app",
-    external: "https://chat-app-demo.com",
-    tech: ["React", "Socket.io", "Express", "MongoDB"]
+    title: "Food Delivery Business App",
+    description: "Comprehensive business management platform for food delivery services with restaurant management, order tracking, and analytics dashboard.",
+    github: "#",
+    external: "#",
+    tech: ["React", "Node.js", "MongoDB", "Express"],
+    comingSoon: true
   }
 ];

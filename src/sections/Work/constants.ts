@@ -58,9 +58,9 @@ export const OTHER_PROJECTS: OtherProject[] = [
     id: 6,
     title: "Food Delivery Business App",
     description: "Comprehensive business management platform for food delivery services with restaurant management, order tracking, and analytics dashboard.",
-    github: "#",
-    external: "#",
+    github: "https://github.com/saurabhgup98/food-delivery-business-app-sera",
+    external: "https://food-delivery-business-app-sera.vercel.app/",
     tech: ["React", "Node.js", "MongoDB", "Express"],
-    comingSoon: true
+    comingSoon: false
   }
 ];
